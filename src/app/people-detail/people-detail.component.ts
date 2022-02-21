@@ -11,7 +11,7 @@ import { People } from '../people';
 })
 export class PeopleDetailComponent implements OnInit {
   peoples = PEOPLES;
-  selectedHero?: People;
+  selectedpeople?: People;
 //name:string;
 
   constructor() { }
@@ -20,7 +20,7 @@ export class PeopleDetailComponent implements OnInit {
   }
 
   onSelect(people: People): void {
-    this.selectedHero = people;
+    this.selectedpeople = people;
   //this.name = people.name;
   }
 
