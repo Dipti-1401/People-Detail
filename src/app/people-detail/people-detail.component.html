@@ -1,0 +1,137 @@
+<div class="row">
+  <div class="col-2">
+    <h2>People</h2>
+    <ul class="people">
+      <li *ngFor="let people of peoples">
+        <p [class.selected]="people === selectedHero" type="text" (click)="onSelect(people)">
+          <span class="name">{{people.name}}</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="col-10">
+    <div *ngIf="selectedHero">
+      <div class="card">
+        <div class="m-3">
+            <div class="row">
+                <div class="col-2">
+                    <img class="card-img-top" src="../../assets/icons/avatar-11.png" alt="Card image cap" id="profileImage" style="width: 100px; margin-top: -10px;">
+                </div>
+                <div class="col-8">
+                    <h1 class="card-title">  <input id="hero-name" value="{{selectedHero.name}}" readonly></h1>
+                    <h5>  <input id="hero-name" [(ngModel)]="selectedHero.post" placeholder="job title"></h5>
+                </div>
+            </div>
+            <hr/>
+            <div class="card-body">
+            <div class="row">
+                <h3>Personal Info</h3>
+                <hr class="m-3" style="width: 240px; height: 4px; background-color: white;">
+    
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-1">
+                                <div class="white-circle" >
+                                <img src="../../assets/icons/email.svg" class="icons">
+                            </div>
+                            </div>
+                            <div class="col-11">
+                                <span class="p-2"><input id="hero-name" [(ngModel)]="selectedHero.email" placeholder="email"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                           
+                            <div class="col-1">
+                                <div class="white-circle" >
+                                <img src="../../assets/icons/briefcase.svg" class="icons">
+                           </div>
+                            </div>
+                            <div class="col-8">
+                                <span class="p-2"> <input id="hero-name" [(ngModel)]="selectedHero.post" placeholder="job title"></span>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="col-4">
+     
+                            <img src="../../assets/wiggle-yellow.png" class="rounded float-right" style="width: 50px; float: right; margin-right: -60px; margin-top: -30px;"> 
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <div class="white-circle">
+                                    <img src="../../assets/icons/call.svg" class="icons">
+                                </div>
+                            </div>
+                            <div class="col-11">
+                                <span ><input id="hero-name" [(ngModel)]="selectedHero.phone" placeholder="phone"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-4">
+                    <p><a href="https://www.linkedin.com/" target="_blank">
+                        <div class="white-circle">
+                            <img src="../../assets/icons/linkedin.svg" class="icons">
+    
+                        </div>
+                        <span class="p-2">Linkedin</span>
+                    </a></p>
+                </div>
+                <div class="col-4">
+                    <p><a href="https://www.github.com/" target="_blank">
+                        <div class="white-circle">
+                            <img src="../../assets/icons/github.svg" class="icons">
+                        </div>
+                        <span class="p-2">Github</span>
+                    </a></p>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <p>
+                        <a href="https://www.instagram.com/" target="_blank">
+                        <div class="white-circle" >
+                            <img src="../../assets/icons/instagram.svg" class="icons" >
+                        </div>
+                        <span class="p-2">Instagram</span>
+                    </a>
+                </p>
+                </div>
+                <div class="col-4">
+                    <p><a href="https://www.twitter.com/" target="_blank">
+                        <div class="white-circle">
+                            <img src="../../assets/icons/twitter.svg" class="icons">
+                        </div>
+                        <span class="p-2">Twitter</span>
+                    </a></p>
+                </div>
+            </div>
+            <br>
+            <img src="../../assets/blue-round.png" style="margin-left: -34px;">
+           
+        </div>
+    
+      
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
